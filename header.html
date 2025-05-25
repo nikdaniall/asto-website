@@ -3,13 +3,13 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
-  color: #333;
+  color: #100f0f;
   line-height: 1.6;
 }
 
 h2, h3, h4, h5 {
   font-weight: 600;
-  color: #1b78cf; /* biru gelap */
+  color: #1b78cf;
 }
 
 /* Navbar */
@@ -32,20 +32,29 @@ h2, h3, h4, h5 {
   height: 50px;
 }
 
+/* Teks nama hanya untuk skrin besar */
+.brand-text {
+  display: inline;
+}
+
+/* Sembunyi teks di telefon */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 0.85rem;
+  }
+
+  .brand-text {
+    display: none;
+  }
+}
+
 .navbar-nav .nav-link {
   color: #ffffff !important;
   font-weight: 500;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffc107 !important; /* kuning hover */
-}
-
-/* Responsif teks brand untuk telefon */
-@media (max-width: 576px) {
-  .navbar-brand {
-    font-size: 0.85rem;
-  }
+  color: #ffc107 !important;
 }
 </style>
 </head>
@@ -56,7 +65,7 @@ h2, h3, h4, h5 {
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">
       <img src="logo-sekolah.png" alt="Logo Sekolah">
-      Persatuan Alumni SMK Putrajaya Presint 16(1)
+      <span class="brand-text">Persatuan Alumni SMK Putrajaya Presint 16(1)</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
       <span class="navbar-toggler-icon"></span>
@@ -64,40 +73,27 @@ h2, h3, h4, h5 {
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
-
-        <!-- Menu utama -->
         <li class="nav-item">
           <a class="nav-link" href="index.html">Laman Utama</a>
         </li>
-
-        <!-- Dropdown Tentang -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            Tentang
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tentang</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="sejarah.html">Sejarah Penubuhan</a></li>
             <li><a class="dropdown-item" href="tujuan.html">Tujuan Penubuhan</a></li>
             <li><a class="dropdown-item" href="jawatankuasa.html">Jawatankuasa Alumni</a></li>
           </ul>
         </li>
-
-        <!-- Dropdown Aktiviti -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            Aktiviti
-          </a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Aktiviti</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="program.html">Program</a></li>
             <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
           </ul>
         </li>
-
-        <!-- Menu lain -->
         <li class="nav-item">
           <a class="nav-link" href="berita.html">Berita</a>
         </li>
-
       </ul>
     </div>
   </div>
