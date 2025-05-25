@@ -1,5 +1,5 @@
-  <!-- CSS -->
-  <style>
+<!-- CSS -->
+<style>
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
@@ -15,9 +15,23 @@ h2, h3, h4, h5 {
 /* Navbar */
 .navbar {
   background-color: #0e2942;
+  padding: 0.5rem 1rem;
 }
 
-.navbar-brand,
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+
 .navbar-nav .nav-link {
   color: #ffffff !important;
   font-weight: 500;
@@ -27,17 +41,23 @@ h2, h3, h4, h5 {
   color: #ffc107 !important; /* kuning hover */
 }
 
+/* Responsif teks brand untuk telefon */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 0.85rem;
+  }
+}
 </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand ms-3" href="index.html">
-  <img src="logo-sekolah.png" alt="Logo Sekolah" width="90" height="90" class="d-inline-block align-text-center">
-    Persatuan Alumni SMK Putrajaya Presint 16(1)
-</a>
+    <a class="navbar-brand" href="index.html">
+      <img src="logo-sekolah.png" alt="Logo Sekolah">
+      Persatuan Alumni SMK Putrajaya Presint 16(1)
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,7 +65,7 @@ h2, h3, h4, h5 {
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
 
-        <!-- Menu lain -->
+        <!-- Menu utama -->
         <li class="nav-item">
           <a class="nav-link" href="index.html">Laman Utama</a>
         </li>
