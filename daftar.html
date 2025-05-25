@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persatuan Alumni SMK Putrajaya Presint 16(1)</title>
+  <link rel="icon" type="image/png" href="logo-sekolah.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Tempat header dimasukkan -->
+  <div id="header-placeholder"></div>
+
+    <!-- CSS -->
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #004080, #0066cc);
+      color: #333;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+        margin-top: 20px; /* Jarak dari header */
+        margin-bottom: 20px;
+        background: white;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0f0f0f;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #0f0f0f;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      border: 2px solid #a3c6f1;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+      resize: vertical;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #1a73e8;
+      box-shadow: 0 0 6px rgba(26,115,232,0.5);
+    }
+
+    textarea {
+      min-height: 90px;
+    }
+
+    button.submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: #1a73e8;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      letter-spacing: 1px;
+      box-shadow: 0 5px 12px rgba(26,115,232,0.6);
+    }
+
+    button.submit-btn:hover {
+      background-color: #0c5bcc;
+      box-shadow: 0 8px 20px rgba(12,91,204,0.8);
+    }
+
+    #status {
+      margin-top: 20px;
+      font-weight: 700;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    #status.success {
+      color: green;
+    }
+
+    #status.error {
+      color: red;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Persatuan Alumni SMK Putrajaya Presint 16(1)</h2>
+
+    <form id="borangAlumni">
+      <label for="nama">Nama Penuh</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="tahun">Tahun Tamat Sekolah</label>
+      <input type="number" id="tahun" name="tahun" required>
+
+      <label for="jantina">Jantina</label>
+      <select id="jantina" name="jantina" required>
+        <option value="">-- Pilih --</option>
+        <option value="Lelaki">Lelaki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
+
+      <label for="telefon">Nombor Telefon</label>
+      <input type="text" id="telefon" name="telefon" required>
+
+      <label for="email">Emel</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="status">Sedang belajar atau bekerja?</label>
+      <select id="statusSelect" name="status" required>
+        <option value="">-- Pilih --</option>
+        <option value="Belajar">Belajar</option>
+        <option value="Bekerja">Bekerja</option>
+      </select>
+
+      <label for="pekerjaan">Jika bekerja, nyatakan pekerjaan anda</label>
+      <input type="text" id="pekerjaan" name="pekerjaan" placeholder="(Isi jika bekerja)">
+
+      <label for="negeri">Alamat tempat belajar/bekerja (negeri)</label>
+      <input type="text" id="negeri" name="negeri" required>
+
+      <label for="sukarelawan">Berminat untuk jadi sukarelawan atau AJK?</label>
+      <select id="sukarelawan" name="sukarelawan" required>
+        <option value="">-- Pilih --</option>
+        <option value="Ya">Ya</option>
+        <option value="Tidak">Tidak</option>
+      </select>
+
+      <label for="telegram">Bersetuju dimasukkan dalam group Telegram rasmi alumni?</label>
+      <select id="telegram" name="telegram" required>
+        <option value="">-- Pilih --</option>
+        <option value="Ya">Ya</option>
+        <option value="Tidak">Tidak</option>
+      </select>
+
+      <label for="cadangan">Cadangan Aktiviti Alumni</label>
+      <textarea id="cadangan" name="cadangan" placeholder="Contoh: networking, reunion, ceramah kerjaya, dll."></textarea>
+
+      <p style="text-align:center;">
+        <b>Sila tunggu sebentar selepas butang hantar ditekan.</b></p>
+      <button type="submit" class="submit-btn">Hantar</button>
+      <div id="status"></div>
+    </form>
+  </div>
+
+  <!-- JavaScript Hantar -->
+  <script>
+    const borang = document.getElementById("borangAlumni");
+
+    borang.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const data = new FormData(borang);
+      fetch("https://script.google.com/macros/s/AKfycbyBbHbtfY7olC8TIDNK1nJ74OSq4DJwArdCqq-q6NgZRbobYoOuXQGXpiKeEcF91tGj/exec", {
+        method: "POST",
+        body: data
+      })
+      .then(response => response.text())
+      .then(result => {
+        alert("Borang berjaya dihantar!");
+        borang.reset();
+        
+      })
+      .catch(error => {
+        alert("Borang tidak berjaya dihantar. Sila cuba semula");
+        console.error(error);
+      });
+    });
+  </script>
+
+  <!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

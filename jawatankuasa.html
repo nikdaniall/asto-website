@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persatuan Alumni SMK Putrajaya Presint 16(1)</title>
+  <link rel="icon" type="image/png" href="logo-sekolah.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Tempat header dimasukkan -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+<!-- CSS -->
+ <style>
+    body {
+      background-color: #f4f9ff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, #004080, #0066cc);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-size: 2rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .image-section {
+      padding: 30px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .image-section img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.02);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jawatankuasa Persatuan Alumni</h1>
+  </header>
+
+  <section class="image-section">
+    <img src="jawatankuasa-1.jpeg" alt="Gambar Jawatankuasa Alumni">
+    <br>
+    <img src="jawatankuasa-2.jpg" alt="Gambar Jawatankuasa Alumni">
+    <p class="mt-3 text-muted">Gambar Rasmi Ahli Jawatankuasa Alumni Tahun 2025</p>
+  </section>
+
+  <!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

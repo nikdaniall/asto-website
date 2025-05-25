@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persatuan Alumni SMK Putrajaya Presint 16(1)</title>
+  <link rel="icon" type="image/png" href="logo-sekolah.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Tempat header dimasukkan -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- CSS -->
+  <style>
+    header {
+      background: linear-gradient(to right, #004080, #0066cc);
+      color: white;
+      padding: 50px 0px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .grid-button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .grid-button-container a {
+      text-decoration: none;
+    }
+
+    .image-button {
+      height: 150px;
+      border: none;
+      border-radius: 15px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .reunion {
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gambar-program/majlis-reunion-alumni-2025.png');
+    }
+
+    .sukan {
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gambar-program/program-sukarelawan-bakti-desa.png');
+    }
+
+    .lawatan {
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('gambar-program/bengkel-kerjaya-motivasi.png');
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+  <div class="container">
+    <h1>Galeri</h1>
+  </div>
+</header>
+
+     <div class="grid-button-container">
+    <a href="https://drive.google.com/drive/my-drive" target="_blank">
+      <div class="image-button reunion">Majlis Reunion Alumni 2025</div>
+    </a>
+
+    <a href="https://drive.google.com/drive/my-drive" target="_blank">
+      <div class="image-button sukan">Program Sukarelawan Bakti Desa</div>
+    </a>
+
+    <a href="https://drive.google.com/drive/my-drive" target="_blank">
+      <div class="image-button lawatan">Bengkel Kerjaya & Motivasi</div>
+    </a>
+  </div>
+
+    <!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

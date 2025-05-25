@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persatuan Alumni SMK Putrajaya Presint 16(1)</title>
+  <link rel="icon" type="image/png" href="logo-sekolah.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Tempat header dimasukkan -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #1976d2, #0d47a1);
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .berita-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .berita-content {
+      padding: 30px;
+    }
+
+    .berita-content h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      color: #0d47a1;
+    }
+
+    .tarikh {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .berita-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .kembali {
+      display: inline-block;
+      margin: 30px 30px 0;
+      text-decoration: none;
+      color: #1976d2;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .kembali:hover {
+      color: #0d47a1;
+    }
+
+    blockquote {
+      border-left: 5px solid #ccc;
+      padding-left: 15px;
+      margin: 20px 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 20px;
+      background: #e3f2fd;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .berita-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .berita-image {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Berita ASTO</h1>
+  </header>
+
+  <main>
+    <img class="berita-image" src="gambar-program/majlis-reunion-alumni-2025.png" alt="majlis-reunion-alumni-2025" />
+
+    <div class="berita-content">
+      <h1>Majlis Reunion Alumni 2025 Eratkan Semula Ikatan Persahabatan</h1>
+    <div class="tarikh"><strong>Putrajaya, 14 Desember 2025</strong></div>
+
+    <p>Suasana penuh mesra dan nostalgia menyelubungi Dewan Serbaguna SMK Putrajaya Presint 16(1) apabila lebih 200 alumni dari pelbagai batch hadir menyertai <strong>Majlis Reunion Alumni 2025</strong> yang berlangsung pada 19 April 2025.</p>
+
+    <p>Majlis yang bertemakan <em>“Kembali Berbakti, Kekal Berhubung”</em> ini dianjurkan oleh Persatuan Alumni dengan kerjasama pihak sekolah. Ia bertujuan untuk mengeratkan semula silaturahim dalam kalangan bekas pelajar, selain membina jaringan yang kukuh antara alumni dan warga sekolah.</p>
+
+    <p>Antara pengisian menarik sepanjang majlis termasuklah ucapan daripada Pengetua SMKPP 16(1), persembahan khas oleh pelajar dan alumni, cabutan bertuah, serta pameran bergambar yang memaparkan kenangan zaman persekolahan dari tahun-tahun terdahulu.</p>
+
+    <p>Lebih bermakna, majlis ini turut menyaksikan pelancaran rasmi laman web alumni serta penyerahan sumbangan dana pendidikan kepada pihak sekolah sebagai tanda penghargaan dan sokongan berterusan daripada alumni.</p>
+
+    <blockquote>
+      "Majlis seperti ini bukan sekadar perjumpaan semula, tetapi satu usaha untuk mengaktifkan kembali semangat kebersamaan dan peranan alumni dalam memajukan sekolah yang pernah menjadi tempat jatuh bangun kita semua," ujar Pengerusi Alumni, Puan Nur Hidayah dalam ucapannya.
+    </blockquote>
+
+    <p>Para peserta menyatakan rasa gembira dan berharap agar majlis reunion seumpama ini diteruskan secara berkala sebagai platform untuk terus berhubung dan memberi sumbangan semula kepada alma mater.</p>
+  </div>
+
+      <a href="../../berita.html" class="kembali">← Kembali ke Senarai Berita</a>
+    </div>
+  </main>
+
+   <!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

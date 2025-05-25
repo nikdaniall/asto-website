@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persatuan Alumni SMK Putrajaya Presint 16(1)</title>
+  <link rel="icon" type="image/png" href="logo-sekolah.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Tempat header dimasukkan -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+<!-- CSS -->
+ <style>
+    header {
+      background: linear-gradient(to right, #004080, #0066cc);
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .card-icon {
+      font-size: 40px;
+      color: #0066cc;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <h1>Tujuan Penubuhan</h1>
+    <p>Menyatukan Alumni Demi Masa Depan yang Lebih Gemilang</p>
+  </div>
+</header>
+
+<!-- Kandungan Tujuan -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Kad 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+          <div class="card-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h5 class="card-title">Mengukuhkan Silaturahim</h5>
+          <p class="card-text">Membina jaringan yang erat antara bekas pelajar dari pelbagai tahun bagi memperkukuh ukhwah dan sokongan sesama alumni.</p>
+        </div>
+      </div>
+
+      <!-- Kad 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+          <div class="card-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <h5 class="card-title">Menyokong Sekolah</h5>
+          <p class="card-text">Memberi sumbangan dari segi pengalaman, masa, dan sumber kepada sekolah demi pembangunan pelajar dan akademik.</p>
+        </div>
+      </div>
+
+      <!-- Kad 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+          <div class="card-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h5 class="card-title">Khidmat Komuniti</h5>
+          <p class="card-text">Menggerakkan aktiviti sosial dan kebajikan yang memberi impak positif kepada masyarakat dan persekitaran setempat.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persatuan Alumni SMK Putrajaya Presint 16(1)</title>
+  <link rel="icon" type="image/png" href="logo-sekolah.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Tempat header dimasukkan -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+<!-- CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #004080, #0066cc);
+      color: white;
+      padding: 45px 0px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 0;
+      font-size: 2.3rem;
+      font-weight: bold;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    /* Styling untuk kotak carian */
+    #cariBerita {
+      border-radius: 30px 0 0 30px !important; /* bulat kiri input */
+      border: 2px solid #1976d2 !important;  /* biru terang */
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      padding-left: 20px !important;
+    }
+
+    #cariBerita:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    .input-group-text {
+      border-radius: 0 30px 30px 0 !important; /* bulat kanan ikon */
+      border: 2px solid #1976d2 !important;
+      border-left: none !important;
+      background-color: #f0f8ff;
+      transition: background-color 0.3s ease;
+    }
+
+    .input-group-text:hover {
+      background-color: #d0e4ff;
+    }
+
+    /* Buat ikon search lebih jelas */
+    .input-group-text svg {
+      fill: #1976d2;
+      transition: fill 0.3s ease;
+    }
+
+    .input-group-text:hover svg {
+      fill: #004080;
+    }
+
+    /* Berita */
+    .berita-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .berita-container a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .berita-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .berita-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .berita-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .berita-card .content {
+      padding: 20px;
+    }
+
+    .berita-card h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      color: #1976d2;
+    }
+
+    .berita-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .berita-card .tarikh {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background: #e3f2fd;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .berita-card img {
+        height: 140px;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Berita ASTO</h1>
+  </header>
+
+  <!-- Kotak Carian dengan ikon di kanan -->
+  <div class="d-flex justify-content-center my-4">
+    <div class="input-group" style="max-width: 400px;">
+      <input type="text" id="cariBerita" class="form-control border-end-0" aria-label="Cari berita" aria-describedby="basic-addon2">
+      <span class="input-group-text bg-white border-start-0" id="basic-addon2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <main class="berita-container">
+
+    <a href="berita-penuh-majlis-reunion-alumni-2025.html">
+      <div class="berita-card">
+        <img src="gambar-program/majlis-reunion-alumni-2025.png" alt="Majlis Reunion 2025">
+        <div class="content">
+          <h3>Majlis Reunion 2025 Berlangsung Meriah</h3>
+          <p>Alumni SMK Putrajaya Presint 16(1) berkumpul semula dalam satu majlis penuh kenangan pada 10 Mei 2025.</p>
+          <div class="tarikh">14 Desember 2025</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="berita-penuh-program-sukarelawan-bakti-desa.html">
+      <div class="berita-card">
+        <img src="gambar-program/program-sukarelawan-bakti-desa.png" alt="Program Sukarelawan Bakti Desa">
+        <div class="content">
+          <h3>Program Sukarelawan Bakti Desa</h3>
+          <p>Alumni turun padang bersama pelajar untuk membersihkan kawasan kampung terpilih serta menyumbang kepada masyarakat setempat.</p>
+          <div class="tarikh">26 Mei 2025</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="berita-penuh-bengkel-kerjaya-motivasi.html">
+      <div class="berita-card">
+        <img src="gambar-program/bengkel-kerjaya-motivasi.png" alt="Bengkel Kerjaya & Motivasi">
+        <div class="content">
+          <h3>Bengkel Kerjaya & Motivasi</h3>
+          <p>Bengkel yang dikendalikan oleh alumni berjaya dalam pelbagai bidang bagi memberi pendedahan kerjaya kepada pelajar tingkatan 4 & 5.</p>
+          <div class="tarikh">12 Mac 2025</div>
+        </div>
+      </div>
+    </a>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Skrip carian -->
+  <script>
+    const inputCari = document.getElementById("cariBerita");
+    const kadBerita = document.querySelectorAll(".berita-card");
+
+    inputCari.addEventListener("input", function () {
+      const carian = this.value.toLowerCase();
+      kadBerita.forEach(function (kad) {
+        const teksKad = kad.innerText.toLowerCase();
+        if (teksKad.includes(carian)) {
+          kad.parentElement.style.display = "block";
+        } else {
+          kad.parentElement.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
