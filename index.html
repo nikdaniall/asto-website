@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Tempat header dimasukkan -->
+  <!-- Tempat header dimasukkan -->
   <div id="header-placeholder"></div>
 
   <script>
@@ -71,17 +71,18 @@
 
 /* Info section */
 .carousel-caption {
-      background: rgba(0,0,0,0.5);
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-    .contact-info {
-      font-size: 1rem;
-      color: white;
-    }
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
 
-    .carousel-control-prev,
+.contact-info {
+  font-size: 1rem;
+  color: white;
+}
+
+.carousel-control-prev,
 .carousel-control-next {
   width: 48px;
   height: 48px;
@@ -111,133 +112,170 @@
   height: 28px;
 }
 
+/* Media query untuk desktop */
+@media (min-width: 992px) {
+  .carousel-control-prev {
+    left: 200px;   /* lebih masuk ke dalam */
+    background-color: rgba(24, 23, 23, 0.7); /* putih separa lutsinar */
+  }
+  .carousel-control-next {
+    right: 200px;  /* lebih masuk ke dalam */
+    background-color: rgba(24, 23, 23, 0.7); /* putih separa lutsinar */
+  }
+}
+
+/* Gambar dalam carousel - saiz tetap semua peranti */
+#carouselExampleIndicators img {
+  width: 90%;               /* Kecilkan dari 100% kepada 90% */
+  max-width: 700px;         /* Kecilkan maksima lebar */
+  height: auto;             /* Auto supaya ikut nisbah asal */
+  object-fit: contain;      /* Pastikan gambar tak crop */
+  margin: 0 auto;
+  display: block;
+}
+
+/* Resize gambar carousel hanya di desktop */
+  @media (min-width: 992px) {
+    #carouselExampleIndicators img {
+      width: 90%;               /* Contoh: 90% dari lebar parent */
+      max-width: 400px;         /* Atau ubah ke 600px ikut cita rasa */
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
 </style>
 </head>
 <body>
 
 <!-- Kandungan utama -->
-  <main class="content">
-    <!-- Hero section with background video -->
-<section class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="drone-trim.mp4" type="video/mp4" />
-    Video tidak disokong oleh pelayar anda.
-  </video>
-  <div class="hero-content">
-    <h1>Selamat Datang ke Laman Alumni</h1>
-    <p>Menghubungkan semula kenangan lama, membina jaringan baharu.</p>
-    <a href="daftar.html" class="btn-primary">Sertai Komuniti</a>
-  </div>
-</section>
+<main class="content">
+  <!-- Hero section with background video -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="drone-trim.mp4" type="video/mp4" />
+      Video tidak disokong oleh pelayar anda.
+    </video>
+    <div class="hero-content">
+      <h1>Selamat Datang ke Laman Alumni</h1>
+      <p>Menghubungkan semula kenangan lama, membina jaringan baharu.</p>
+      <a href="daftar.html" class="btn-primary">Sertai Komuniti</a>
+    </div>
+  </section>
 
-    <div class="container my-5">
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+  <div class="container my-5" style="max-width: 1080px;">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
 
-      <div class="carousel-item active">
-        <a href="daftar.html">
-          <img src="daftar.png" class="d-block w-100 rounded">
-        </a>
+        <div class="carousel-item active">
+          <a href="daftar.html">
+            <img src="daftar.png" class="d-block w-100 rounded" alt="Daftar">
+          </a>
+        </div>
+
+        <div class="carousel-item">
+          <a href="berita-penuh-majlis-reunion-alumni-2025.html">
+            <img src="gambar-program/majlis-reunion-alumni-2025.png" class="d-block w-100 rounded" alt="Majlis Reunion Alumni 2025">
+          </a>
+        </div>
+
+        <div class="carousel-item">
+          <a href="berita-penuh-program-sukarelawan-bakti-desa.html">
+            <img src="gambar-program/program-sukarelawan-bakti-desa.png" class="d-block w-100 rounded" alt="Program Sukarelawan Bakti Desa">
+          </a>
+        </div>
+
+        <div class="carousel-item">
+          <a href="berita-penuh-bengkel-kerjaya-motivasi.html">
+            <img src="gambar-program/bengkel-kerjaya-motivasi.png" class="d-block w-100 rounded" alt="Bengkel Kerjaya Motivasi">
+          </a>
+        </div>
+
       </div>
 
-      <div class="carousel-item">
-        <a href="berita-penuh-majlis-reunion-alumni-2025.html">
-          <img src="gambar-program/majlis-reunion-alumni-2025.png" class="d-block w-100 rounded">
-        </a>
-      </div>
-
-      <div class="carousel-item">
-        <a href="berita-penuh-program-sukarelawan-bakti-desa.html">
-          <img src="gambar-program/program-sukarelawan-bakti-desa.png" class="d-block w-100 rounded">
-        </a>
-      </div>
-
-      <div class="carousel-item">
-        <a href="berita-penuh-bengkel-kerjaya-motivasi.html">
-          <img src="gambar-program/bengkel-kerjaya-motivasi.png" class="d-block w-100 rounded">
-        </a>
-      </div>
-
+      <!-- Button kiri/kanan -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
     </div>
 
-    <!-- Button kiri/kanan -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
+    <!-- Bulatan nombor slide -->
+    <div id="slide-indicators" class="d-flex justify-content-center gap-2 mt-3"></div>
   </div>
 
-  <!-- Bulatan nombor slide -->
-  <div id="slide-indicators" class="d-flex justify-content-center gap-2 mt-3"></div>
-</div>
-
-<style>
-  #slide-indicators {
-    user-select: none;
-  }
-  .slide-circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #cccccc;
-    color: #333333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 14px;
-  }
-  .slide-circle.active {
-    background-color: #ffb703;
-    color: black;
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('#carouselExampleIndicators');
-    const indicatorsContainer = document.getElementById('slide-indicators');
-    const slides = carousel.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
-
-    // Buat bulatan nombor ikut bilangan slide
-    for (let i = 0; i < totalSlides; i++) {
-      const circle = document.createElement('div');
-      circle.classList.add('slide-circle');
-      if (i === 0) circle.classList.add('active');
-      circle.textContent = i + 1;
-
-      // Bila klik bulatan, slide ke nombor itu
-      circle.addEventListener('click', () => {
-        const carouselInstance = bootstrap.Carousel.getInstance(carousel);
-        carouselInstance.to(i);
-      });
-
-      indicatorsContainer.appendChild(circle);
+  <style>
+    #slide-indicators {
+      user-select: none;
     }
+    .slide-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #cccccc;
+      color: #333333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 14px;
+    }
+    .slide-circle.active {
+      background-color: #ffb703;
+      color: black;
+    }
+  </style>
 
-    // Update active bulatan bila slide bertukar
-    carousel.addEventListener('slid.bs.carousel', (e) => {
-      const activeIndex = e.to;
-      const circles = indicatorsContainer.querySelectorAll('.slide-circle');
-      circles.forEach((circle, idx) => {
-        circle.classList.toggle('active', idx === activeIndex);
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('#carouselExampleIndicators');
+      const indicatorsContainer = document.getElementById('slide-indicators');
+      const slides = carousel.querySelectorAll('.carousel-item');
+      const totalSlides = slides.length;
+
+      // Buat bulatan nombor ikut bilangan slide
+      for (let i = 0; i < totalSlides; i++) {
+        const circle = document.createElement('div');
+        circle.classList.add('slide-circle');
+        if (i === 0) circle.classList.add('active');
+        circle.textContent = i + 1;
+
+        // Bila klik bulatan, slide ke nombor itu
+        circle.addEventListener('click', () => {
+          const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+          carouselInstance.to(i);
+        });
+
+        indicatorsContainer.appendChild(circle);
+      }
+
+      // Update active bulatan bila slide bertukar
+      carousel.addEventListener('slid.bs.carousel', (e) => {
+        const activeIndex = e.to;
+        const circles = indicatorsContainer.querySelectorAll('.slide-circle');
+        circles.forEach((circle, idx) => {
+          circle.classList.toggle('active', idx === activeIndex);
+        });
       });
     });
-  });
-</script>
+  </script>
+
+</main>
 
 <!-- Script Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Hubungi -->
-<section id="hubungi" class="py-3 bg-light text-center">
+<section id="hubungi" class="py-3 bg-light text-center" style="margin-top: 100px;">
   <div class="container">
-    <h2 class="mb-4">Hubungi Kami</h2>
+    <br>
+    <h2 class="mb-4" style="color: #0066cc;">Hubungi Kami</h2>
 
     <p>Sekiranya anda mempunyai sebarang pertanyaan atau menghadapi masalah,
     <br>sila hubungi kami melalui e-mel di alumni.sto@gmail.com.
@@ -245,7 +283,7 @@
     <br>Ikuti kami di :
 
     <div class="d-flex justify-content-center flex-wrap gap-2">
-       <a href="https://www.instagram.com/" class="btn btn-primary d-flex align-items-center justify-content-center px-4" style="min-width: 150px; background-color: #e1306c; color: white;" target="_blank">
+      <a href="https://www.instagram.com/" class="btn btn-primary d-flex align-items-center justify-content-center px-4" style="min-width: 150px; background-color: #e1306c; color: white;" target="_blank">
         <i class="bi bi-instagram me-2"></i> Instagram
       </a>
       <a href="https://www.facebook.com/" class="btn btn-primary d-flex align-items-center justify-content-center px-4" style="min-width: 150px; background-color: #1877f2; color: white;"  target="_blank">
@@ -258,15 +296,10 @@
   </div>
 </section>
 
-<!-- Script Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
- <!-- Footer -->
+<!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
   &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

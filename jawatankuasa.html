@@ -50,6 +50,7 @@
       text-align: center;
     }
 
+    /* Gambar default (semua saiz skrin) */
     .image-section img {
       max-width: 90%;
       height: auto;
@@ -58,8 +59,11 @@
       transition: transform 0.3s ease;
     }
 
-    .image-section img:hover {
-      transform: scale(1.02);
+    /* Bila skrin lebar (desktop) - kecilkan gambar */
+    @media (min-width: 992px) {
+      .image-section img {
+        max-width: 50%;
+      }
     }
 
     @keyframes fadeInDown {
@@ -77,8 +81,6 @@
 
   <section class="image-section">
     <img src="jawatankuasa-1.jpeg" alt="Gambar Jawatankuasa Alumni">
-    <br>
-    <img src="jawatankuasa-2.jpg" alt="Gambar Jawatankuasa Alumni">
     <p class="mt-3 text-muted">Gambar Rasmi Ahli Jawatankuasa Alumni Tahun 2025</p>
   </section>
 

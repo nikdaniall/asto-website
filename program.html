@@ -20,6 +20,10 @@
   
   <!-- CSS -->
   <style>
+    body {
+      background-color: #f4f9ff;
+    }
+
     header {
       background: linear-gradient(to right, #004080, #0066cc);
       color: white;
@@ -32,18 +36,24 @@
       font-weight: bold;
       animation: fadeInDown 1s ease-out;
     }
-    
+
     .container {
       max-width: 1000px;
       margin: auto;
+      padding: 0 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 30px;
     }
 
     .card {
       background: white;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-top: 20px;
-      margin-bottom: 20px;
       padding: 20px;
       transition: 0.3s;
       cursor: pointer;
@@ -75,6 +85,14 @@
       font-style: italic;
     }
 
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+      display: block;
+    }
+
     footer {
       text-align: center;
       margin-top: 50px;
@@ -82,21 +100,17 @@
       color: #94a3b8;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      .card h2 {
-        font-size: 1.2rem;
-      }
-    }
-
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Untuk Desktop (2 kad sebelah-sebelah) */
+    @media (min-width: 992px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
@@ -108,26 +122,33 @@
     </div>
   </header>
 
-  <a href="berita-penuh-majlis-reunion-alumni-2025.html" class="card">
-    <h2>Majlis Reunion Alumni 2025</h2>
-    <p>Majlis tahunan untuk menghimpunkan bekas pelajar bersama guru-guru dalam suasana santai dan mesra. Pelbagai aktiviti menarik akan diadakan.</p>
-    <img src="gambar-program/majlis-reunion-alumni-2025.png" alt="Majlis Reunion Alumni 2025" style="height: 400px; width: 100%;" /> 
-    <p class="tarikh">📅 14 Disember 2025 | 📍 Dewan Sekolah</p>
-  </a>
+  <!-- Kad disusun dalam grid -->
+  <div class="container">
+    <div class="card-grid">
 
-  <a href="berita-penuh-program-sukarelawan-bakti-desa.html" class="card">
-    <h2>Program Sukarelawan Bakti Desa</h2>
-    <p>Alumni turun padang bersama pelajar untuk membersihkan kawasan kampung terpilih serta menyumbang kepada masyarakat setempat.</p>
-    <img src="gambar-program/program-sukarelawan-bakti-desa.png" alt="Program Sukarelawan" style="height: 400px; width: 100%;" /> 
-    <p class="tarikh">📅 26 Mei 2025 | 📍 Kampung Seri Aman</p>
-  </a>
+      <a href="berita-penuh-majlis-reunion-alumni-2025.html" class="card">
+        <h2>Majlis Reunion Alumni 2025</h2>
+        <p>Majlis tahunan untuk menghimpunkan bekas pelajar bersama guru-guru dalam suasana santai dan mesra. Pelbagai aktiviti menarik akan diadakan.</p>
+        <img src="gambar-program/majlis-reunion-alumni-2025.png" alt="Majlis Reunion Alumni 2025" /> 
+        <p class="tarikh">📅 14 Disember 2025 | 📍 Dewan Sekolah</p>
+      </a>
 
-  <a href="berita-penuh-bengkel-kerjaya-motivasi.html" class="card">
-    <h2>Bengkel Kerjaya & Motivasi</h2>
-    <p>Bengkel yang dikendalikan oleh alumni berjaya dalam pelbagai bidang bagi memberi pendedahan kerjaya kepada pelajar tingkatan 4 & 5.</p>
-    <img src="gambar-program/bengkel-kerjaya-motivasi.png" alt="Bengkel Kerjaya & Motivasi" style="height: 400px; width: 100%;" /> 
-    <p class="tarikh">📅 12 Mac 2025 | 📍 Bilik Seminar</p>
-  </a>
+      <a href="berita-penuh-program-sukarelawan-bakti-desa.html" class="card">
+        <h2>Program Sukarelawan Bakti Desa</h2>
+        <p>Alumni turun padang bersama pelajar untuk membersihkan kawasan kampung terpilih serta menyumbang kepada masyarakat setempat.</p>
+        <img src="gambar-program/program-sukarelawan-bakti-desa.png" alt="Program Sukarelawan" /> 
+        <p class="tarikh">📅 26 Mei 2025 | 📍 Kampung Seri Aman</p>
+      </a>
+
+      <a href="berita-penuh-bengkel-kerjaya-motivasi.html" class="card">
+        <h2>Bengkel Kerjaya & Motivasi</h2>
+        <p>Bengkel yang dikendalikan oleh alumni berjaya dalam pelbagai bidang bagi memberi pendedahan kerjaya kepada pelajar tingkatan 4 & 5.</p>
+        <img src="gambar-program/bengkel-kerjaya-motivasi.png" alt="Bengkel Kerjaya & Motivasi" /> 
+        <p class="tarikh">📅 12 Mac 2025 | 📍 Bilik Seminar</p>
+      </a>
+
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">

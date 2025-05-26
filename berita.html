@@ -106,8 +106,9 @@
 
     .berita-card img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
+      height: auto;
+      border-radius: 8px;
+      display: block;
     }
 
     .berita-card .content {
@@ -141,12 +142,26 @@
     }
 
     @media (max-width: 600px) {
+      .input-group {
+      max-width: 80% !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .berita-card {
+        max-width: 280px; /* saiz kecilkan card pada telefon */
+        margin-left: auto;
+        margin-right: auto; /* supaya card center */
+      }
+    }
+
+    @media (max-width: 600px) {
       header h1 {
         font-size: 1.5rem;
       }
 
       .berita-card img {
-        height: 140px;
+        height: 220px;
       }
     }
 
@@ -182,7 +197,7 @@
         <img src="gambar-program/majlis-reunion-alumni-2025.png" alt="Majlis Reunion 2025">
         <div class="content">
           <h3>Majlis Reunion 2025 Berlangsung Meriah</h3>
-          <p>Alumni SMK Putrajaya Presint 16(1) berkumpul semula dalam satu majlis penuh kenangan pada 10 Mei 2025.</p>
+          <p>Suasana penuh mesra dan nostalgia menyelubungi Dewan Serbaguna SMK Putrajaya Presint 16(1) apabila lebih...</p>
           <div class="tarikh">14 Desember 2025</div>
         </div>
       </div>
@@ -193,7 +208,7 @@
         <img src="gambar-program/program-sukarelawan-bakti-desa.png" alt="Program Sukarelawan Bakti Desa">
         <div class="content">
           <h3>Program Sukarelawan Bakti Desa</h3>
-          <p>Alumni turun padang bersama pelajar untuk membersihkan kawasan kampung terpilih serta menyumbang kepada masyarakat setempat.</p>
+          <p>Persatuan Alumni SMK Putrajaya Presint 16(1) telah berjaya melaksanakan Program Sukarelawan...</p>
           <div class="tarikh">26 Mei 2025</div>
         </div>
       </div>
@@ -204,7 +219,7 @@
         <img src="gambar-program/bengkel-kerjaya-motivasi.png" alt="Bengkel Kerjaya & Motivasi">
         <div class="content">
           <h3>Bengkel Kerjaya & Motivasi</h3>
-          <p>Bengkel yang dikendalikan oleh alumni berjaya dalam pelbagai bidang bagi memberi pendedahan kerjaya kepada pelajar tingkatan 4 & 5.</p>
+          <p>Persatuan Alumni SMK Putrajaya Presint 16(1) dengan kerjasama pihak sekolah telah berjaya menganjurkan Bengkel Kerjaya & Motivasi yang...</p>
           <div class="tarikh">12 Mac 2025</div>
         </div>
       </div>
