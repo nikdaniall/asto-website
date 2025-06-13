@@ -1,9 +1,274 @@
 <!DOCTYPE html>
-<html>
+<html lang="ms">
 <head>
-    <title>Penyelenggaraan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kelab Alumni SMK Putrajaya Presint 16(1)</title>
+  <link rel="icon" type="image/png" href="logo-sekolah.png"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Tempat header dimasukkan -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- CSS -->
+  <style>
+  /* Hero section */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  overflow: hidden;
+  background: none !important; /* hilangkan background gradient asal */
+  height: 300px; /* boleh ubah ikut nak tinggi */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+  filter: brightness(0.6); /* gelapkan sikit video supaya teks lebih jelas */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary {
+  background-color: #ffb703;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #ff9900;
+}
+
+/* Info section */
+.carousel-caption {
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.contact-info {
+  font-size: 1rem;
+  color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7); /* putih separa lutsinar */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.3s;
+  border: none;
+  z-index: 10;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(0) drop-shadow(0 0 1px rgba(0, 0, 0, 0.7));
+  width: 28px;
+  height: 28px;
+}
+
+/* Media query untuk desktop */
+@media (min-width: 992px) {
+  .carousel-control-prev {
+    left: 200px;   /* lebih masuk ke dalam */
+    background-color: rgba(24, 23, 23, 0.7); /* putih separa lutsinar */
+  }
+  .carousel-control-next {
+    right: 200px;  /* lebih masuk ke dalam */
+    background-color: rgba(24, 23, 23, 0.7); /* putih separa lutsinar */
+  }
+}
+
+/* Gambar dalam carousel - saiz tetap semua peranti */
+#carouselExampleIndicators img {
+  width: 90%;               /* Kecilkan dari 100% kepada 90% */
+  max-width: 700px;         /* Kecilkan maksima lebar */
+  height: auto;             /* Auto supaya ikut nisbah asal */
+  object-fit: contain;      /* Pastikan gambar tak crop */
+  margin: 0 auto;
+  display: block;
+}
+
+/* Resize gambar carousel hanya di desktop */
+  @media (min-width: 992px) {
+    #carouselExampleIndicators img {
+      width: 90%;               /* Contoh: 90% dari lebar parent */
+      max-width: 400px;         /* Atau ubah ke 600px ikut cita rasa */
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+</style>
 </head>
 <body>
-    <h1>Website dalam penyelenggaraan. Sila datang semula kemudian.</h1>
+
+<!-- Kandungan utama -->
+<main class="content">
+  <!-- Hero section with background video -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="drone-trim.mp4" type="video/mp4" />
+      Video tidak disokong oleh pelayar anda.
+    </video>
+    <div class="hero-content">
+      <h1>Selamat Datang ke Laman Alumni</h1>
+      <p>Menghubungkan semula kenangan lama, membina jaringan baharu.</p>
+      <a href="daftar.html" class="btn-primary">Sertai Komuniti</a>
+    </div>
+  </section>
+
+  <div class="container my-5" style="max-width: 1080px;">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <a href="daftar.html">
+            <img src="daftar.png" class="d-block w-100 rounded" alt="Daftar">
+          </a>
+        </div>
+      </div>
+
+      <!-- Button kiri/kanan -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Bulatan nombor slide -->
+    <div id="slide-indicators" class="d-flex justify-content-center gap-2 mt-3"></div>
+  </div>
+
+  <style>
+    #slide-indicators {
+      user-select: none;
+    }
+    .slide-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #cccccc;
+      color: #333333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 14px;
+    }
+    .slide-circle.active {
+      background-color: #ffb703;
+      color: black;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('#carouselExampleIndicators');
+      const indicatorsContainer = document.getElementById('slide-indicators');
+      const slides = carousel.querySelectorAll('.carousel-item');
+      const totalSlides = slides.length;
+
+      // Buat bulatan nombor ikut bilangan slide
+      for (let i = 0; i < totalSlides; i++) {
+        const circle = document.createElement('div');
+        circle.classList.add('slide-circle');
+        if (i === 0) circle.classList.add('active');
+        circle.textContent = i + 1;
+
+        // Bila klik bulatan, slide ke nombor itu
+        circle.addEventListener('click', () => {
+          const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+          carouselInstance.to(i);
+        });
+
+        indicatorsContainer.appendChild(circle);
+      }
+
+      // Update active bulatan bila slide bertukar
+      carousel.addEventListener('slid.bs.carousel', (e) => {
+        const activeIndex = e.to;
+        const circles = indicatorsContainer.querySelectorAll('.slide-circle');
+        circles.forEach((circle, idx) => {
+          circle.classList.toggle('active', idx === activeIndex);
+        });
+      });
+    });
+  </script>
+
+</main>
+
+<!-- Script Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Hubungi -->
+<section id="hubungi" class="py-3 bg-light text-center" style="margin-top: 100px;">
+  <div class="container">
+    <br>
+    <h2 class="mb-4" style="color: #0066cc;">Hubungi Kami</h2>
+
+    <p>Sekiranya anda mempunyai sebarang pertanyaan atau menghadapi sebarang masalah,
+    <br>sila hubungi kami melalui e-mel di alumnistooffcial@gmail.com.
+    <br>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  Kelab Alumni SMK Putrajaya Presint 16(1).
+</footer>
+
 </body>
 </html>
