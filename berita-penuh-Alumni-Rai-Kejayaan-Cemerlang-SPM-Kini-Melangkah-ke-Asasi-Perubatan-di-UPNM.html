@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="logo-sekolah.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
-  <!-- Tempat header dimasukkan -->
+    <!-- Tempat header dimasukkan -->
   <div id="header-placeholder"></div>
 
   <script>
@@ -49,13 +49,23 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
+    /* Gambar atas berita */
     .berita-image {
-      max-width: 70%;   /* kawalan saiz bila desktop */
-      width: 100%;      /* penuh bila screen kecil */
-      height: auto;
+      width: 70%;
       border-radius: 15px;
       display: block;
       margin: 0 auto;
+      height: auto;
+    }
+
+    /* Gambar tengah & bawah */
+    .tengah-image {
+      max-width: 100%;
+      border-radius: 15px;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .berita-content {
@@ -93,13 +103,6 @@
       text-align: center;
     }
 
-    figure img {
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 100%;
-      height: auto;
-    }
-
     figure figcaption {
       margin-top: 8px;
       font-size: 0.9rem;
@@ -125,7 +128,8 @@
       }
 
       .berita-image {
-        max-width: 100%;
+        width: 100%;
+        max-width: 90%;
       }
     }
 
@@ -140,6 +144,7 @@
       color: #0d47a1;
       text-decoration: underline;
     }
+
   </style>
 </head>
 <body>
@@ -149,7 +154,7 @@
   </header>
 
   <main>
-    <img class="berita-image img-fluid" src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/image14 - Edited.jpg"/>
+    <img class="berita-image" src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/image14 - Edited.jpg"/>
 
     <div class="berita-content">
       <h1>Alumni Rai Kejayaan Cemerlang SPM, Kini Melangkah ke Asasi Perubatan di UPNM</h1>
@@ -160,9 +165,9 @@
       <p>Bekas pelajar kelas <em>5 Farabi</em> ini berjaya meraih keputusan <strong>7A+ 2A</strong>, sekali gus membuktikan bahawa usaha gigih, disiplin dan pengurusan masa yang teratur mampu membuahkan hasil yang membanggakan. Kini, beliau meneruskan pengajian di <em>Universiti Pertahanan Nasional Malaysia (UPNM)</em> dalam program Asasi Perubatan, dengan cita-cita untuk bergelar doktor dalam bidang pertahanan.</p>
 
       <!-- Gambar Muzainah -->
-      <figure class="text-center my-4">
-        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/image8 - Edited.jpg" class="img-fluid d-block mx-auto" style="max-width: 70%; border-radius: 15px;"/>
-        <figcaption class="mt-2 text-muted" style="font-size: 0.9rem;">
+      <figure>
+        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/image8 - Edited.jpg" class="tengah-image"/>
+        <figcaption>
           Beliau yang kini sedang melanjutkan pengajian di Asasi Perubatan, Universiti Pertahanan Nasional Malaysia.
         </figcaption>
       </figure>
@@ -173,7 +178,7 @@
 
       <!-- Gambar jadual belajar -->
       <figure>
-        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/IMG_0684.png" class="img-fluid d-block mx-auto" style="max-width: 70%; border-radius: 15px;"/>
+        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/IMG_0684.png" class="tengah-image"/>
         <figcaption>Antara jadual yang disusun oleh Muzainah bagi memastikan masa dapat diatur dengan baik.</figcaption>
       </figure>
 
@@ -186,7 +191,7 @@
 
       <!-- Gambar platform kuiz -->
       <figure>
-        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/IMG_0686.png" class="img-fluid d-block mx-auto" style="max-width: 70%; border-radius: 15px;"/>
+        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/IMG_0686.png" class="tengah-image"/>
         <figcaption>Antara platform kuiz digital yang digunakan Muzainah bagi ulang kaji interaktif, seperti aplikasi Gizmo.</figcaption>
       </figure>
 
@@ -203,7 +208,7 @@
     </div>
   </main>
 
-  <!-- Footer -->
+   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
   </footer>
