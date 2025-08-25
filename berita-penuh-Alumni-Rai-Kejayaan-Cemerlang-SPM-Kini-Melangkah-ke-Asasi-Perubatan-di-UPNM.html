@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persatuan Alumni SMK Putrajaya Presint 16(1)</title>
+  <link rel="icon" type="image/png" href="logo-sekolah.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Tempat header dimasukkan -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #1976d2, #0d47a1);
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px 20px 60px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .berita-image {
+      width: 50%;
+      border-radius: 15px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .berita-content {
+      padding: 30px;
+    }
+
+    .berita-content h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      color: #0d47a1;
+    }
+
+    .tarikh {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .berita-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    blockquote {
+      border-left: 5px solid #ccc;
+      padding-left: 15px;
+      margin: 20px 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    figure {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    figure img {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    figure figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 20px;
+      background: #e3f2fd;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .berita-content h1 {
+        font-size: 1.5rem;
+      }
+
+      .berita-image {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+      }
+    }
+
+    .kembali-link {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.kembali-link:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Berita ASTO</h1>
+  </header>
+
+  <main>
+    <img class="berita-image" src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/image14 - Edited.jpg" />
+
+    <div class="berita-content">
+      <h1>Alumni Rai Kejayaan Cemerlang SPM, Kini Melangkah ke Asasi Perubatan di UPNM</h1>
+      <div class="tarikh"><strong>26 Ogos 2025</strong></div>
+
+      <p>Kelab Alumni SMK Putrajaya Presint 16(1) dengan penuh rasa bangga mengucapkan tahniah kepada salah seorang alumni muda, <strong>Siti Wan Muzainah binti Wan Adli Muzani</strong>, atas pencapaian cemerlang dalam peperiksaan Sijil Pelajaran Malaysia (SPM) 2024.</p>
+
+      <p>Bekas pelajar kelas <em>5 Farabi</em> ini berjaya meraih keputusan <strong>7A+ 2A</strong>, sekali gus membuktikan bahawa usaha gigih, disiplin dan pengurusan masa yang teratur mampu membuahkan hasil yang membanggakan. Kini, beliau meneruskan pengajian di <em>Universiti Pertahanan Nasional Malaysia (UPNM)</em> dalam program Asasi Perubatan, dengan cita-cita untuk bergelar doktor dalam bidang pertahanan.</p>
+
+      <!-- Gambar Muzainah -->
+      <figure class="text-center my-4">
+        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/image8 - Edited.jpg" class="img-fluid rounded shadow" style="max-width:70%;">
+        <figcaption class="mt-2 text-muted" style="font-size: 0.9rem;">
+          Beliau yang kini sedang melanjutkan pengajian di Asasi Perubatan, Universiti Pertahanan Nasional Malaysia.
+        </figcaption>
+      </figure>
+
+      <p>Sepanjang zaman persekolahannya, beliau amat meminati mata pelajaran Matematik Tambahan, Kimia dan Biologi. Baginya, Addmath memberi kepuasan kerana setiap soalan yang berjaya diselesaikan terasa <em>rewarding</em>, Kimia pula menjadi kekuatan utama dengan pencapaian konsisten A+, manakala Biologi menyalurkan minat beliau terhadap fisiologi. Minat ini menjadi asas yang mengukuhkan langkahnya ke bidang perubatan.</p>
+
+      <p>Dalam persediaan menghadapi SPM, beliau mengatur rutin harian yang ketat dan konsisten. Tidur seawal jam 10 malam, bangun sekitar 2 hingga 3 pagi untuk menyiapkan latihan kendiri serta meneliti topik-topik penting. Waktu persekolahan pula dimanfaatkan sepenuhnya untuk bertanya guru secara terus mengenai perkara yang tidak difahami. Cabaran sebagai ketua pengawas dan tanggungjawab lain tidak melemahkan semangatnya, sebaliknya memupuk kebijaksanaan dalam mengurus masa. Sejak Tingkatan 3 dan 4 lagi, beliau sudah merancang penyertaan dalam pelbagai aktiviti kokurikulum di peringkat kebangsaan dan antarabangsa, agar tahun peperiksaan dapat difokuskan sepenuhnya kepada pelajaran.</p>
+
+      <!-- Gambar jadual belajar -->
+      <figure>
+        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/IMG_0684.png" class="img-fluid" style="max-width:80%;">
+        <figcaption>Antara jadual yang disusun oleh Muzainah bagi memastikan masa dapat diatur dengan baik.</figcaption>
+      </figure>
+
+      <p>Kejayaan ini turut didorong oleh sokongan penuh daripada semua guru yang sentiasa memberikan bimbingan tambahan, motivasi berterusan dan perhatian terhadap keperluan akademiknya. Sokongan terbesar datang daripada ibunya yang sentiasa mendoakan beliau, memastikan segala keperluan pembelajaran mencukupi dan sentiasa mengingatkan beliau agar tidak terpesong daripada tujuan utama.</p>
+
+      <p>Minat mendalam terhadap dunia perubatan sejak kecil, ditambah pula dengan kecenderungan terhadap bidang ketenteraan sejak Tingkatan 3, menjadikan UPNM pilihan yang paling tepat untuk Muzainah. Beliau kini berhasrat meneruskan pengajian ke peringkat ijazah dalam Fakulti Perubatan Pertahanan sebaik sahaja tamat pengajian asasi.</p>
+
+      <p>Beliau turut menitipkan pesanan kepada pelajar yang bakal menduduki SPM:</p>
+      <blockquote>“Atur masa dengan betul, gunakan kalendar digital, praktikkan teknik Pomodoro, jauhkan diri daripada gangguan media sosial, dan jangan kedekut ilmu. Cara belajar paling berkesan ialah dengan mengajar orang lain.”</blockquote>
+
+      <!-- Gambar platform kuiz -->
+      <figure>
+        <img src="gambar-berita/berita-penuh-Alumni-Rai-Kejayaan-Cemerlang-SPM-Kini-Melangkah-ke-Asasi-Perubatan-di-UPNM/IMG_0686.png" class="img-fluid" style="max-width:80%;">
+        <figcaption>Antara platform kuiz digital yang digunakan Muzainah bagi ulang kaji interaktif, seperti aplikasi Gizmo.</figcaption>
+      </figure>
+
+      <p>Motto hidup yang menjadi pegangan beliau ialah <em>“Man jadda wa jadda – siapa yang bersungguh-sungguh pasti akan berjaya”</em> serta prinsip <em>“jangan menyesal nanti”</em>. Baginya, setiap keputusan yang diambil pasti ada akibat, maka belajarlah untuk memilih jalan yang terbaik sejak awal.</p>
+
+      <p>Pencapaian Siti Wan Muzainah binti Wan Adli Muzani bukan sahaja menjadi kebanggaan buat warga SMK Putrajaya Presint 16(1), malah diharap dapat menjadi inspirasi kepada seluruh pelajar untuk terus berusaha gigih mencapai impian masing-masing.</p>
+    </div>
+
+        <!-- Link kembali -->
+    <div class="text-start my-4 ms-3">
+      <a href="berita.html" class="kembali-link">
+        ← Kembali ke Halaman Berita
+      </a>
+    </div>
+  </main>
+
+
+   <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 Alumni SMK Putrajaya Presint 16(1). Semua Hak Cipta Terpelihara.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
